@@ -20,9 +20,9 @@ const NewsListBlock = styled.div`
 
 const NewsList = ({ category }) => {
   const [loading, response, error] = usePromise(() => {
-    const query = category === 'all' ? '' : `&category=${category}`;
+    const query = category === 'all' ? '' : `&topic=${category}`;
     return axios.get(
-      `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=bd6c3b2612814321a6968f00942632e0`,
+      `https://gnews.io/api/v4/top-headlines?&lang=en${query}&token=91c1c980c19ffe9e1aa0318aaf457bf7`,
     );
   }, [category]);
 

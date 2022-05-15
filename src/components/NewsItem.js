@@ -32,13 +32,13 @@ const NewsItemBlock = styled.div`
 `;
 
 const NewsItem = ({ article }) => {
-  const { title, description, url, urlToImage } = article;
+  const { title, description, url, image } = article;
   return (
     <NewsItemBlock>
-      {urlToImage && (
+      {image && (
         <div className="thumbnail">
           <a href={url} target="_blank" rel="noopener noreferrer">
-            <img src={urlToImage} alt="thumbnail" />
+            <img src={image} alt="thumbnail" />
           </a>
         </div>
       )}
